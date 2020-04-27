@@ -1,4 +1,7 @@
+// * dependencies:
 import React from 'react';
+import { connect } from 'react-redux'
+
 
 const AddedFeature = props => {
   return (
@@ -10,4 +13,7 @@ const AddedFeature = props => {
   );
 };
 
-export default AddedFeature;
+// ! need to add mapstatetoprops
+// ! need to add actions
+
+export default connect(null, {})(AddedFeature);
