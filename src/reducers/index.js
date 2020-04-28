@@ -3,7 +3,7 @@ import { ADD_FEATURE, REMOVE_FEATURE } from '../actions/index'
 
 
 
-const intialState = {
+const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,
@@ -20,11 +20,20 @@ const intialState = {
     ]
 };
 
-// export default reducer (state = initialState, action) =>  {
-//   switch(action.type){
-//     case ADD_FEATURE:
-//       return 
-//         console.log('add feature ran')
-      
-//   }
-// }
+export default (state = initialState, action) => {
+  console.log('reducer overall:', state, action)
+  switch(action.type){
+    case ADD_FEATURE:
+      console.log('add feature ran')
+      return {
+        state
+      };
+    case REMOVE_FEATURE:
+      console.log('remove item ran')
+      return {
+        state
+      }
+    default:
+      return state;
+  }
+}

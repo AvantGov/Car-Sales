@@ -23,13 +23,13 @@ const App = () => {
     ]
   };
 
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
 
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
+  // const buyItem = item => {
+  //   // dipsatch an action here to add an item
+  // };
 
   return (
     <div className="boxes">
@@ -38,7 +38,8 @@ const App = () => {
         <AddedFeatures car={state.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
+        {/* <AdditionalFeatures additionalFeatures={state.additionalFeatures} /> */}
+        <AdditionalFeatures />
         <Total car={state.car} additionalPrice={state.additionalPrice} />
       </div>
     </div>
