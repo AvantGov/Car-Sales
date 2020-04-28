@@ -12,4 +12,11 @@ const Total = props => {
 // ! need mapstatetoprops
 // ! need to add actions
 
-export default connect(null, {})(Total);
+const mapStateToProps = (state) => {
+   return {
+     car: state.car,
+     additionalPrice: state.additionalPrice
+   }
+}
+
+export default connect(mapStateToProps, {})(Total);
