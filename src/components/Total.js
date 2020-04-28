@@ -9,9 +9,6 @@ const Total = props => {
   );
 };
 
-// ! need mapstatetoprops
-// ! need to add actions
-
 const mapStateToProps = (state) => {
    return {
      car: state.car,

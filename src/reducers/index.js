@@ -2,7 +2,6 @@
 import { ADD_FEATURE, REMOVE_FEATURE } from '../actions/index'
 
 
-
 const initialState = {
     additionalPrice: 0,
     car: {
@@ -35,9 +34,14 @@ export default (state = initialState, action) => {
       };
     case REMOVE_FEATURE:
       console.log('remove item ran')
-      return {
-        ...state
-      }
+        return {
+          ...state,
+          car: {
+            features: state.car.features.filter((item) => {
+              return item.id !== action.payload.id
+            })
+          }
+        }
     default:
       return state;
   }
