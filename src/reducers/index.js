@@ -1,3 +1,8 @@
+// * action types: 
+import { ADD_FEATURE, REMOVE_FEATURE } from '../actions/index'
+
+
+
 const intialState = {
     additionalPrice: 0,
     car: {
@@ -14,3 +19,12 @@ const intialState = {
       { id: 4, name: 'Rear spoiler', price: 250 }
     ]
 };
+
+// export default reducer (state = initialState, action) =>  {
+//   switch(action.type){
+//     case ADD_FEATURE:
+//       return 
+//         console.log('add feature ran')
+      
+//   }
+// }
