@@ -26,12 +26,17 @@ export default (state = initialState, action) => {
     case ADD_FEATURE:
       console.log('add feature ran')
       return {
-        state
+        ...state,
+        car: {
+          ...state.car,
+          features: [ ...state.car.features, action.payload]
+        }
+        
       };
     case REMOVE_FEATURE:
       console.log('remove item ran')
       return {
-        state
+        ...state
       }
     default:
       return state;
