@@ -37,6 +37,7 @@ export default (state = initialState, action) => {
         return {
           ...state,
           car: {
+            ...state.car,
             features: state.car.features.filter((item) => {
               return item.id !== action.payload.id
             })
